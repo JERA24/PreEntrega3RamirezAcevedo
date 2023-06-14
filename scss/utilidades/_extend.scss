@@ -1,0 +1,27 @@
+// extend
+
+%title{
+    box-shadow: 5px 5px 10px rgb(0, 49, 0);
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 30px 30px;
+}
+
+%banner{
+    text-align: center;
+    font-style: oblique;
+    font-size: 2rem;
+    margin: 0px 100px;
+    padding: 10px;
+}
+
+%exptitle{
+    text-align: center;
+    font-style: oblique;
+    font-size: 2rem;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+}

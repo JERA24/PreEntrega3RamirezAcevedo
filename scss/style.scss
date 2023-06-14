@@ -1,0 +1,42 @@
+/* reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// import
+
+@import "../scss/utilidades/variables";
+
+
+/* estilos generales*/
+
+body{
+    background-color: $color-principal01;
+}
+
+.nav-color{
+    background-color: $color-principal02;
+}
+
+footer{
+    color: $color-principal01;
+    text-align: center;
+    background-color: $color-principal02;
+}
+
+/* estilos para pantalla de celulares -home- */
+
+@import "../scss/html/home";
+
+/* estilos para pantalla de celulares -nosotro- */
+
+@import "../scss/html/nosotros";
+
+/* estilos para pantalla de celulares -experiencias- */
+
+@import "../scss/html/experiencias";
+
+

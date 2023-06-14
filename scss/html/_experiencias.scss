@@ -1,0 +1,34 @@
+// import
+
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+// estilo para pantalla de celulares -experiencias-
+
+//main
+
+.Principal-Experiencias{
+    @include grid;
+    div img{
+        @include imgs;
+    }
+    h1{
+        @extend %exptitle;
+    }
+    h2{
+        @extend %title;
+    }
+    p{
+        @include p;
+    }
+    .img-2{
+        display: none;
+    }
+    .img-4{
+        display: none;
+    }
+    .img-6{
+        display: none;
+    }
+}
+

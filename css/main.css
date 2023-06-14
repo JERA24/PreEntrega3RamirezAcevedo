@@ -1,0 +1,230 @@
+/* reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* estilos generales*/
+body {
+  background-color: goldenrod; }
+
+.nav-color {
+  background-color: #003a00; }
+
+footer {
+  color: goldenrod;
+  text-align: center;
+  background-color: #003a00; }
+
+/* estilos para pantalla de celulares -home- */
+.Principal-home h1, .Principal-home h2, .Principal-Nosotros h2, .Principal-Experiencias h2 {
+  box-shadow: 5px 5px 10px #003100;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 30px 30px; }
+
+.Principal-Nosotros h1 {
+  text-align: center;
+  font-style: oblique;
+  font-size: 2rem;
+  margin: 0px 100px;
+  padding: 10px; }
+
+.Principal-Experiencias h1 {
+  text-align: center;
+  font-style: oblique;
+  font-size: 2rem;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  margin-bottom: 50px; }
+
+.Principal-home {
+  display: grid;
+  align-items: center;
+  padding: 1rem; }
+  .Principal-home div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; }
+  .Principal-home p {
+    text-align: center;
+    padding: 3px;
+    border-top: 1px solid #003a00;
+    border-bottom: 1px solid #003a00;
+    margin-top: 3px; }
+  .Principal-home a {
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 1px;
+    margin-left: 50%;
+    border-radius: 5px;
+    background-color: #003a00;
+    color: goldenrod; }
+  .Principal-home .SanPatricio-Home {
+    display: none; }
+
+/*mq para tablet*/
+@media screen and (min-width: 600px) {
+  .Principal-home {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3fr;
+    column-gap: 5px; }
+    .Principal-home .Nosotros-Home {
+      margin-top: 5px;
+      grid-column: span 2;
+      grid-row: span 1; }
+    .Principal-home h1 {
+      grid-column: span 2;
+      grid-row: span 1; }
+    .Principal-home h2 {
+      grid-column: span 2;
+      grid-row: span 1; }
+    .Principal-home .SanPatricio-Home {
+      display: block;
+      grid-column: 1fr;
+      grid-row: span 2; }
+    .Principal-home .PatioCervecero-Home {
+      grid-column: 1fr;
+      grid-row: span 2; }
+    .Principal-home a {
+      grid-row: span 2; } }
+
+/*mq para desktop*/
+@media screen and (min-width: 1024px) {
+  .Principal-home {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 4fr;
+    column-gap: 5px; }
+    .Principal-home h1 {
+      grid-column: span 1;
+      grid-row: span 1; }
+    .Principal-home .Nosotros-Home {
+      grid-column: span 1;
+      grid-row: span 1; }
+    .Principal-home h2 {
+      grid-column: span 2;
+      grid-row: span 3; }
+    .Principal-home .SanPatricio-Home {
+      grid-column: span 1;
+      grid-row: span 4; }
+    .Principal-home a {
+      grid-column: span 2;
+      margin-left: 1200px; } }
+
+/* estilos para pantalla de celulares -nosotro- */
+.Principal-Nosotros {
+  display: grid;
+  align-items: center;
+  padding: 1rem; }
+  .Principal-Nosotros .Banner-Santo {
+    height: 100%;
+    background-image: url(../img/SanArnulfo-Banner.png);
+    background-position: center; }
+    .Principal-Nosotros .Banner-Santo p {
+      text-align: center;
+      font-style: italic;
+      font-size: 1rem;
+      color: #003a00;
+      font-weight: bold;
+      margin: 400px 150px 0px 150px;
+      box-shadow: 1px 1px 5px #003a00;
+      background-color: goldenrod; }
+  .Principal-Nosotros div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; }
+  .Principal-Nosotros p {
+    text-align: center;
+    padding: 3px;
+    border-top: 1px solid #003a00;
+    border-bottom: 1px solid #003a00;
+    margin-top: 3px; }
+  .Principal-Nosotros .Fabrica-uno {
+    display: none; }
+  .Principal-Nosotros .Fabrica-dos {
+    display: none; }
+
+/*mq para tablet*/
+@media screen and (min-width: 600px) {
+  .Principal-Nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    column-gap: 5px; }
+    .Principal-Nosotros .Fabrica-uno {
+      display: block;
+      grid-column: 1fr;
+      grid-row: auto; }
+    .Principal-Nosotros h1 {
+      grid-column: span 2;
+      grid-row: auto; }
+    .Principal-Nosotros .Banner-Santo {
+      grid-column: span 2;
+      grid-row: auto; }
+    .Principal-Nosotros h2 {
+      grid-column: span 2;
+      grid-row: auto; }
+    .Principal-Nosotros .Equipo-Arnulfo {
+      grid-column: 1fr;
+      grid-row: auto; }
+    .Principal-Nosotros .Santo-Patrono {
+      grid-column: span 2;
+      grid-row: auto; } }
+
+/*mq para desktop*/
+@media screen and (min-width: 1024px) {
+  .Principal-Nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    column-gap: 5px; }
+    .Principal-Nosotros .Fabrica-dos {
+      display: block;
+      grid-column: span 2;
+      grid-row: auto;
+      height: 80%;
+      margin-bottom: 30px; }
+    .Principal-Nosotros .Fabrica-dos p {
+      margin: 0px 230px 0px 230px;
+      text-align: center;
+      font-style: italic;
+      font-size: 1rem;
+      color: #003a00;
+      font-weight: bold;
+      box-shadow: 1px 1px 5px #003a00; }
+    .Principal-Nosotros .Equipo-Arnulfo {
+      grid-column: 1fr;
+      grid-row: auto; }
+    .Principal-Nosotros .Fabrica-uno {
+      grid-column: 1fr;
+      grid-row: span 2; }
+    .Principal-Nosotros .Santo-Patrono {
+      left: 18%;
+      position: relative;
+      width: 65%; } }
+
+/* estilos para pantalla de celulares -experiencias- */
+.Principal-Experiencias {
+  display: grid;
+  align-items: center;
+  padding: 1rem; }
+  .Principal-Experiencias div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; }
+  .Principal-Experiencias p {
+    text-align: center;
+    padding: 3px;
+    border-top: 1px solid #003a00;
+    border-bottom: 1px solid #003a00;
+    margin-top: 3px; }
+  .Principal-Experiencias .img-2 {
+    display: none; }
+  .Principal-Experiencias .img-4 {
+    display: none; }
+  .Principal-Experiencias .img-6 {
+    display: none; }

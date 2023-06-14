@@ -1,0 +1,116 @@
+// import
+
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+// estilo para pantalla de celulares -nosotros-
+
+//main
+
+.Principal-Nosotros{
+    @include grid;
+    .Banner-Santo{
+        height: 100%;
+        background-image: url(../img/SanArnulfo-Banner.png);
+        background-position: center;
+        p{
+            @include banner;
+        }
+    }
+    div img{
+        @include imgs;
+    }
+    p{
+        @include p;
+    }
+    h1{
+        @extend %banner;
+    }
+    h2{
+        @extend %title;
+    }
+    .Fabrica-uno{
+        display: none;
+    }
+    .Fabrica-dos{
+        display: none;
+    }
+}
+
+/*mq para tablet*/
+
+@media screen and (min-width:600px){
+    
+    .Principal-Nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        column-gap: 5px;
+        .Fabrica-uno{
+        display: block;
+        grid-column: 1fr;
+        grid-row: auto;
+        }
+        h1{
+        grid-column: span 2;
+        grid-row: auto;
+        }
+        .Banner-Santo{
+        grid-column: span 2;
+        grid-row: auto;
+        }
+        h2{
+        grid-column: span 2;
+        grid-row: auto;
+        }
+        .Equipo-Arnulfo{
+        grid-column: 1fr;
+        grid-row: auto;
+        }
+        .Santo-Patrono{
+        grid-column: span 2;
+        grid-row: auto;
+        }
+    }
+}
+
+/*mq para desktop*/
+
+@media screen and (min-width:1024px){
+    .Principal-Nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        column-gap: 5px;
+        .Fabrica-dos{
+        display: block;
+        grid-column: span 2;
+        grid-row: auto;
+        height: 80%;
+        margin-bottom: 30px;
+        }
+        .Fabrica-dos p{
+        margin: 0px 230px 0px 230px;
+        text-align: center;
+        font-style: italic;
+        font-size: 1rem;
+        color: rgb(0, 58, 0);
+        font-weight: bold;
+        box-shadow: 1px 1px 5px rgb(0, 58, 0);
+        }
+        .Equipo-Arnulfo{
+        grid-column: 1fr;
+        grid-row: auto;
+        }
+        .Fabrica-uno{
+        grid-column: 1fr;
+        grid-row: span 2;
+        }
+        .Santo-Patrono{
+        left: 18%;
+        position: relative;
+        width: 65%;
+        }
+    }
+}
+
+
+

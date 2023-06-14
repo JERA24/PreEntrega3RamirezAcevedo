@@ -1,0 +1,111 @@
+// import
+
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+// estilo para pantalla de celulares -home-
+
+//main
+
+.Principal-home{
+    @include grid;
+    div img{
+        @include imgs;
+    }
+    h1{
+        @extend %title;
+    }
+    h2{
+        @extend %title;
+    }
+    p{
+        @include p;
+    }
+    a{
+        @include a;
+    }
+    .SanPatricio-Home{
+        display: none;
+    }
+}
+
+/*mq para tablet*/
+
+@media screen and (min-width:600px){
+    .Principal-home{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 3fr;
+        column-gap: 5px;
+        .Nosotros-Home{
+        margin-top: 5px;
+        grid-column: span 2;
+        grid-row: span 1;
+        }
+        h1{
+        grid-column: span 2;
+        grid-row: span 1;
+        }
+        h2{
+        grid-column: span 2;
+        grid-row: span 1;
+        }
+        .SanPatricio-Home{
+        display: block;
+        grid-column: 1fr;
+        grid-row: span 2;
+        }
+        .PatioCervecero-Home{
+        grid-column: 1fr;
+        grid-row: span 2;
+        }
+        a{
+        grid-row: span 2;
+        }
+    }
+}
+
+/*mq para desktop*/
+
+@media screen and (min-width:1024px){
+    .Principal-home{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 4fr;
+        column-gap: 5px;
+        h1{
+        grid-column: span 1;
+        grid-row: span 1;
+        }
+        .Nosotros-Home{
+        grid-column: span 1;
+        grid-row: span 1;
+        }
+        h2{
+        grid-column: span 2;
+        grid-row: span 3;
+        }
+        .SanPatricio-Home{
+        grid-column: span 1;
+        grid-row: span 4;
+        }
+        a{
+        grid-column: span 2;
+        margin-left: 1200px;
+        }
+    }
+}
+
+
+
+
+
+   
+
+    
+
+   
+
+    
+
+
+
